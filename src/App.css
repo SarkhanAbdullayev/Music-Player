@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+.App {
+  background-color: white;
+  padding-top: 30px;
+}
+
+.playerNav {
+  position: relative;
+  z-index: 0;
+  margin: 0 auto;
+  width: 400px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.play-pause i{
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.audioDiv {
+  margin: 0 auto;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.btns {
+  width: 20px;
+  cursor: pointer;
+}
+
+.prev, .next{
+  font-size: 20px;
+}
+
+.coverDiv {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 100%;
+  margin-bottom: 28px;
+  animation: coverAnime 25s infinite linear;
+  animation-play-state: paused;
+}
+
+.coverDiv img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+@keyframes coverAnime {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.durationDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 45px;
+  cursor: pointer;
+}
+
+.duration {
+  overflow: hidden;
+  height: 14px;
+  width: 470px;
+  border-radius: 20px;
+  background-color: rgb(202, 201, 201);
+}
+
+.innerDuration {
+  border-radius: 20px;
+  height: 100%;
+  
+}
+
+.currentTime , .fullTime {
+  font-size: 16px;
+}
+
+.name {
+  font-size: 17px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.artist {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.mute {
+  transition: 400ms;
+}
+.mute:hover .volumeDiv{
+  width: 100px;
+}
+.mute:hover .currentVol{
+  display: block;
+}
+
+.volumeDiv {
+  width: 0px;
+  height: 24px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 100%;
+  top: 3px;
+  transition: 400ms;
+}
+
+.innerVolume {
+  width: 90px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: rgb(202, 201, 201);
+  display: flex;
+  align-items: center;
+}
+
+.currentVol {
+  width: 5px;
+  height: 15px;
+  border-radius: 3px;
+  position: relative;
+  left: 100%;
+  display: none;
+}
+
+/*?---- sideBar ----*/
+
+.sidebar {
+  z-index: 100000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-right: 5px;
+  transition: 400ms ease-in-out;
+  box-shadow: 10px 0px 100px rgb(191, 191, 191);
+}
+
+.sidebarTitle {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  height: 120px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.sidebarContent {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  flex-grow: 1;
+  /* row-gap: 10px; */
+}
+
+.track {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 15px;
+  transition: 200ms ease-in;
+  cursor: pointer;
+}
+.track:hover {
+  background-color: #ecf0ff;
+}
+
+.sideCover {
+  width: 70px;
+  height: 70px;
+}
+
+.sideImg {
+  width: 100%;
+  height: 100%;
+}
+
+.sideArtist {
+  font-size: 13px;
+  line-height: 10px;
+}
+
+.libraryCall {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  padding: 5px 10px;
+  display: flex;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.active {
+  background-color: black;
+  color: white;
+  padding: 4px 9px;
+}
+
+.sideActive {
+  background-color: #c2d0fd;
+}
