@@ -81,7 +81,7 @@ const PlayerBar = ({playPause, setPlayPause,mute, setMute,track, setTrack}) => {
                 }}>
                     <i className="fa-solid fa-angle-right"></i>
                 </div>
-                <div className='btns mute'>
+                <div className='mute'>
                     <i className={`fa-solid fa-volume-${!mute ? 'low' : 'xmark'}`} onClick={muteSound}></i>
                     <div className='volumeDiv'>
                         <div className='innerVolume' onClick={(e) => {

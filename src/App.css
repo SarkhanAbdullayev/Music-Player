@@ -51,6 +51,10 @@
 .btns {
   width: 20px;
   cursor: pointer;
+  transition: 300ms ;
+}
+.btns:hover {
+  scale: 1.2;
 }
 
 .prev, .next{
@@ -123,7 +127,9 @@
 }
 
 .mute {
+  width: 20px;
   transition: 400ms;
+  cursor: pointer;
 }
 .mute:hover .volumeDiv{
   width: 100px;
