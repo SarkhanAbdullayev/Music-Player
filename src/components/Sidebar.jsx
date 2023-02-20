@@ -29,7 +29,10 @@ const Sidebar = ({ track, setTrack, sidebarCall, setSidebarCall }) => {
 
     return (
         <div ref={sidebarRef} className='sidebar' style={{transform : sidebarCall ? 'TranslateX(0%)' : 'TranslateX(-100%)'}}>
-            <div className='sidebarTitle'>Library</div>
+            <div className='sidebarTitle'>
+                <img style={{width: '70px', height: '70px', marginRight: '20px'}} src="../../public/logo.png" alt="" srcset="" />
+                Library
+            </div>
             <div className='sidebarContent'>
                 {data.map((el,index) => {
                     return <Track track={track} setTrack={setTrack} index={index} key={index} cover={el.cover} name={el.name} artist={el.artist} />

@@ -28,7 +28,7 @@ const PlayerBar = ({playPause, setPlayPause,mute, setMute,track, setTrack}) => {
     const coverRef = useRef()
 
     return (
-        <div>
+        <div className='playerBar'>
             <div ref={coverRef} className='coverDiv' onClick={(e) => {
                 console.log(getComputedStyle(e.target).transform);
             }}>

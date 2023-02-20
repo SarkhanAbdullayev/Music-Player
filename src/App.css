@@ -18,6 +18,13 @@
   padding-top: 30px;
 }
 
+.playerBar {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .playerNav {
   position: relative;
   z-index: 0;
