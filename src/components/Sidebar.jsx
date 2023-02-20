@@ -30,7 +30,7 @@ const Sidebar = ({ track, setTrack, sidebarCall, setSidebarCall }) => {
     return (
         <div ref={sidebarRef} className='sidebar' style={{transform : sidebarCall ? 'TranslateX(0%)' : 'TranslateX(-100%)'}}>
             <div className='sidebarTitle'>
-                <img style={{width: '70px', height: '70px', marginRight: '20px'}} src="../../public/logo.png" alt="" srcset="" />
+                <img style={{width: '70px', height: '70px', marginRight: '20px'}} src="/logo.png" alt="" />
                 Library
             </div>
             <div className='sidebarContent'>
